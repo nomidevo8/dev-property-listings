@@ -1,0 +1,38 @@
+/* Dev Property Listings Frontend Styles */
+
+.dev-single-property .content img {
+	max-width: 100%;
+	height: auto;
+	border-radius: .25rem;
+}
+
+.dev-single-property .badge.border {
+	border-color: rgba(0,0,0,.125) !important;
+}
+
+.dev-single-property .card {
+	border-radius: .5rem;
+}
+
+.dev-single-property .card-body h3 {
+	font-weight: 600;
+}
+
+.dev-single-property .ratio iframe {
+	border: 0;
+	border-radius: .5rem;
+}
+
+/* Prominent carousel controls */
+.dev-carousel-control {
+	width: auto;
+	padding: .5rem .75rem;
+	background: rgba(0,0,0,.45);
+	border-radius: 2rem;
+	margin: 0 .5rem;
+	transform: translateY(-50%);
+}
+.dev-carousel-control:hover { background: rgba(0,0,0,.65); }
+.dev-carousel-control .carousel-control-prev-icon,
+.dev-carousel-control .carousel-control-next-icon { filter: invert(1) grayscale(100%); }
+.dev-carousel-label { color: #fff; font-weight: 600; margin-left: .4rem; }
