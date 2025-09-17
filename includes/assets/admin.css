@@ -1,0 +1,308 @@
+/* Dev Property Listings Admin Styles */
+
+.dev-property-meta-container {
+    max-width: 100%;
+}
+
+.dev-property-section {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.dev-section-title {
+    margin: 0;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.dev-section-title:hover {
+    background: #e9ecef;
+}
+
+.dev-section-title::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.dev-section-title.collapsed::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.dev-section-content {
+    padding: 20px;
+    display: block;
+}
+
+.dev-section-content.collapsed {
+    display: none;
+}
+
+.dev-property-table {
+    width: 100%;
+    margin: 0;
+}
+
+.dev-property-table th {
+    width: 200px;
+    padding: 10px 15px 10px 0;
+    vertical-align: top;
+    font-weight: 600;
+    color: #333;
+}
+
+.dev-property-table td {
+    padding: 10px 0;
+    vertical-align: top;
+}
+
+.dev-property-table input[type="text"],
+.dev-property-table input[type="email"],
+.dev-property-table input[type="url"],
+.dev-property-table input[type="tel"],
+.dev-property-table input[type="date"],
+.dev-property-table input[type="time"],
+.dev-property-table input[type="datetime-local"],
+.dev-property-table select,
+.dev-property-table textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+.dev-property-table input[type="number"] {
+    width: 120px;
+}
+
+.dev-property-table input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Media Field Styles */
+.dev-media-field,
+.dev-gallery-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dev-media-field .button,
+.dev-gallery-field .button {
+    align-self: flex-start;
+}
+
+.dev-media-preview,
+.dev-gallery-preview {
+    margin-top: 10px;
+}
+
+.dev-media-preview img,
+.dev-gallery-preview img {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.dev-gallery-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dev-gallery-preview .gallery-item {
+    position: relative;
+    display: inline-block;
+}
+
+.dev-gallery-preview .gallery-item .remove-item {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dev-property-table th,
+    .dev-property-table td {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+    
+    .dev-property-table th {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .dev-property-table input[type="text"],
+    .dev-property-table input[type="email"],
+    .dev-property-table input[type="url"],
+    .dev-property-table input[type="tel"],
+    .dev-property-table input[type="date"],
+    .dev-property-table input[type="time"],
+    .dev-property-table input[type="datetime-local"],
+    .dev-property-table select,
+    .dev-property-table textarea {
+        max-width: 100%;
+    }
+}
+
+/* Field Group Colors */
+.dev-property-section[data-section="basic_details"] .dev-section-title {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.dev-property-section[data-section="size_dimensions"] .dev-section-title {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.dev-property-section[data-section="rooms_interior"] .dev-section-title {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.dev-property-section[data-section="interior_features"] .dev-section-title {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+}
+
+.dev-property-section[data-section="exterior_features"] .dev-section-title {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+}
+
+
+.dev-property-section[data-section="location_details"] .dev-section-title {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #333;
+}
+
+
+.dev-property-section[data-section="media"] .dev-section-title {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    color: white;
+}
+
+.dev-property-section[data-section="agent_contact"] .dev-section-title {
+    background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+    color: #333;
+}
+
+
+
+.dev-property-section[data-section="utilities_services"] .dev-section-title {
+    background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+    color: #333;
+}
+
+/* Loading States */
+.dev-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.dev-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success/Error Messages */
+.dev-message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.dev-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.dev-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Toggle Section Functionality */
+.dev-section-toggle {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Enhanced Form Elements */
+.dev-property-table .form-field {
+    margin-bottom: 15px;
+}
+
+.dev-property-table .form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.dev-property-table .form-field .description {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Required Field Indicator */
+.dev-property-table .required::after {
+    content: ' *';
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Field Validation */
+.dev-property-table .field-error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.dev-property-table .field-success {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
